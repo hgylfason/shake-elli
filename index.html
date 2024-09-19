@@ -36,16 +36,24 @@
 	}
 
 	/* Video styling for centered video */
-	video {
-	max-width: 80%; /* Adjusts the max width of the video, change as needed */
-	max-height: 80vh; /* Ensures the video won't exceed the viewport height */
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: Add a shadow effect */
+	img,video {
+		object-fit: cover;
+		height: 100vh; /* Ensures the video won't exceed the viewport height */
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: Add a shadow effect */
 	}
 	</style>
 </head>
 <body>
-		    <img src="./shake-elli.gif" alt="Heilsa Ella - Mood Booster by Elvar Guðmundsson">
+	<!-- <img src="./shake-elli.gif" alt="Heilsa Ella - Mood Booster by Elvar Guðmundsson"> -->
+		    <video id="myVideo" autoplay muted playsinline>
+		<!-- <video controls autoplay> -->
+			<source src="./shake-elli.mp4" type="video/mp4">
+		</video>
 
+		<script>
+        const video = document.getElementById('myVideo');
+        video.playbackRate = 0.83;
+    </script>
 </body>
 	<script type="application/ld+json">
 {
